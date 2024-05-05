@@ -21,14 +21,23 @@ def main():
     vertices = 5
     # Initialize adjacency list
     adjList = [[] for _ in range(vertices)]
-    # Add edges to the graph
-    addEdge(adjList, 0, 1)
-    addEdge(adjList, 0, 2)
-    addEdge(adjList, 1, 2)
-    addEdge(adjList, 2, 0)
-    addEdge(adjList, 2, 3)
-    addEdge(adjList, 3, 3)
-    # Perform DFS
-    print("Depth First Traversal (starting from vertex 2):")
-    dfs(adjList, 2)
+
+    while True:
+        print("\n1. Add edge")
+        print("2. Perform DFS")
+        print("3. Exit")
+        choice = int(input("Enter your choice: "))
+
+        if choice == 1:
+            u = int(input("Enter the source vertex: "))
+            v = int(input("Enter the destination vertex: "))
+            addEdge(adjList, u, v)
+        elif choice == 2:
+            start = int(input("Enter the starting vertex for DFS: "))
+            print("Depth First Traversal (starting from vertex {}):".format(start))
+            dfs(adjList, start)
+        elif choice == 3:
+            break
+        else:
+            print("Invalid choice. Please enter a number between 1 and 3.")
 main()
