@@ -13,7 +13,14 @@ class Solution:
         print(nums)
 
 nums_input = input()
-nums = ast.literal_eval(nums_input)
+try:
+    nums = ast.literal_eval(nums_input)
+    if not isinstance(nums, list):
+        raise ValueError
+except (SyntaxError, ValueError):
+    print("Invalid input. Please enter a list.")
+    exit()
+
 val = int(input())
 
 obj = Solution()
