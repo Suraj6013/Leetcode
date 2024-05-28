@@ -38,8 +38,7 @@ def menu():
             ll.print_list()
         elif choice == 3:
             break
-        else:
-            print("Invalid choice. Please try again.")
+        
 
 
 menu()
