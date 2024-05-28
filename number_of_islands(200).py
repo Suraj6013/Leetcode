@@ -11,7 +11,6 @@ for i in range(len(grid)):
 
 
 def create_graph(grid):
-  # Initialize an empty graph
   graph = {}
   
   # Get the number of rows and columns in the grid
