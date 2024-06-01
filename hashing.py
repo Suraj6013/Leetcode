@@ -19,6 +19,7 @@ class HashTable:
 size = int(input("Enter the size of the hash table: "))
 ht = HashTable(size)
 elements = input("Enter the elements to be hashed, separated by space: ").split()
+print("key value")
 for element in elements:
     ht.insert(int(element))
 ht.print_table()
