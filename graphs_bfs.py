@@ -28,7 +28,6 @@ def addEdge(adjList, u, v):
     adjList[u].append(v)
 
 def main():
-    # Number of vertices in the graph
     vertices = 5
 
     # Adjacency list representation of the graph
