@@ -23,7 +23,7 @@ class Solution:
         while fast and fast.next:
             fast = fast.next.next
             slow = slow.next
-        
+
         # slow is now at the middle node
         mid = slow.next
         slow.next = None  # cut off the first half
